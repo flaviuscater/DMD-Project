@@ -1,0 +1,27 @@
+09:46:31 **** Auto Build of configuration Debug for project TestPeripherals ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../TestPeripherals_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:48:19: warning: unused variable 'ps7_uart_1' [-Wunused-variable]
+    static XUartPs ps7_uart_1;
+                   ^~~~~~~~~~
+At top level:
+../src/testperiph.c:48:19: warning: 'ps7_uart_1' defined but not used [-Wunused-variable]
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: TestPeripherals.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../TestPeripherals_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "TestPeripherals.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xqspips_selftest_example.o ./src/xtmrctr_intr_example.o ./src/xtmrctr_selftest_example.o ./src/xuartps_polled_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: TestPeripherals.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size TestPeripherals.elf  |tee "TestPeripherals.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18660	    424	   3620	  22704	   58b0	TestPeripherals.elf
+'Finished building: TestPeripherals.elf.size'
+' '
+
+09:46:32 Build Finished (took 960ms)
+
