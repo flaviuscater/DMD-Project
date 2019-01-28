@@ -1420,7 +1420,7 @@ Enable DDR Controller of Zynq PS
 <B>Memory Part</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-MT41J128M16 HA-15E
+Custom
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 
@@ -1508,7 +1508,7 @@ Provide the width of the DRAM chip
 <B>DRAM Device Capacity</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-2048 MBits
+512 MBits
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 
@@ -1541,7 +1541,7 @@ Defines the bank to which an active an ACTIVE, READ, WRITE, or Precharge Command
 <B>ROW Address Count</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-14
+15
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 Provide the Row address for ACTIVE commands
@@ -1574,7 +1574,7 @@ Select the Column Access Strobe (CAS) Latency. It refers to the amount of time i
 <B>CAS Write Latency</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-6
+5.000000
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 Select the CAS Write Latency
@@ -10497,10 +10497,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>56</B>
+<B>30</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>1580</B>
+<B>c00</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75nS to 195nS). DRAM Related. Default value is set for DDR3. Dynamic Bit Field.</B>
@@ -10540,7 +10540,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>4159b</B>
+<B>40c1b</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 0</B>
@@ -10624,10 +10624,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time between write and precharge to same bank DDR and DDR3: WL + BL/2 + tWR LPDDR2: WL + BL/2 + tWR + 1 Unit: Clocks where, WL: write latency. BL: burst length. This must match the value programmed in the BL bit of the mode register to the DRAM. BST is not supported at present. tWR: write recovery time. This comes directly from the DRAM specs.</B>
@@ -10747,7 +10747,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>452460d2</B>
+<B>452460d1</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 1</B>
@@ -10831,10 +10831,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Time from write command to write data on DDRC to PHY Interface. (PHY adds an extra flop delay on the write data path; hence this value is one less than the write latency of the DRAM device itself). DDR2 and DDR3: WL -1 LPDDR2: WL Where WL: Write Latency of DRAM DRAM related. In non-LPDDR mode, the minimum DRAM Write Latency (DDR2) supported is 3. In LPDDR mode, the required DRAM Write Latency of 1 is supported. Since write latency (CWL) min is 3, and DDR2 CWL is CL-1, the min (DDR2) CL supported is 4</B>
@@ -10851,10 +10851,10 @@ ddrc_ctrl
 <B>3e0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>e0</B>
+<B>100</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from read command to write command. Include time for bus turnaround and all per-bank, per-rank, and global constraints. DDR2 and DDR3: RL + BL/2 + 2 - WL LPDDR2: RL + BL/2 + RU (tDQSCKmax / tCK) + 1 - WL Write Pre-amble and DQ/DQS jitter timer is included in the above equation. DRAM RELATED.</B>
@@ -10871,10 +10871,10 @@ ddrc_ctrl
 <B>7c00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>e</B>
+<B>d</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>3800</B>
+<B>3400</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from write command to read command. Includes time for bus turnaround and recovery times and all per-bank, per-rank, and global constraints. DDR2 and DDR3: WL + tWTR + BL/2 LPDDR2: WL + tWTR + BL/2 + 1 Unit: clocks. Where, WL: Write latency, BL: burst length. This should match the value. Programmed in the BL bit of the mode register to the DRAM. tWTR: internal WRITE to READ command delay. This comes directly from the DRAM specs.</B>
@@ -10974,7 +10974,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>720238e5</B>
+<B>72023504</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 2</B>
@@ -11739,10 +11739,10 @@ ddrc_ctrl
 <B>ffff</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>DDR2: Value loaded into EMR2 register DDR3: Value loaded into MR2 register LPDDR2: Value loaded into MR3 register</B>
@@ -11782,7 +11782,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM EMR2, EMR3 access</B>
@@ -12821,10 +12821,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>6</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>600000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects theAXI address bit used as row address bit 14. Valid Range: 0 to 6, Internal Base: 23 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 14 is set to 0.</B>
@@ -12864,7 +12864,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>f666666</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Select DRAM row address bits</B>
@@ -20477,10 +20477,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>This delay determines when to select the active rank's ratio logic delay for Write Data and Write DQS slave delay lines after PHY receives a write command at Control Interface. The programmed value must be (Write Latency - 4) with a minimum value of 1.</B>
@@ -20640,7 +20640,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1fc82</B>
+<B>1fc81</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Training control 3</B>
@@ -55914,10 +55914,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>56</B>
+<B>30</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>1580</B>
+<B>c00</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75nS to 195nS). DRAM Related. Default value is set for DDR3. Dynamic Bit Field.</B>
@@ -55957,7 +55957,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>4159b</B>
+<B>40c1b</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 0</B>
@@ -56041,10 +56041,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time between write and precharge to same bank DDR and DDR3: WL + BL/2 + tWR LPDDR2: WL + BL/2 + tWR + 1 Unit: Clocks where, WL: write latency. BL: burst length. This must match the value programmed in the BL bit of the mode register to the DRAM. BST is not supported at present. tWR: write recovery time. This comes directly from the DRAM specs.</B>
@@ -56164,7 +56164,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>452460d2</B>
+<B>452460d1</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 1</B>
@@ -56248,10 +56248,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Time from write command to write data on DDRC to PHY Interface. (PHY adds an extra flop delay on the write data path; hence this value is one less than the write latency of the DRAM device itself). DDR2 and DDR3: WL -1 LPDDR2: WL Where WL: Write Latency of DRAM DRAM related.</B>
@@ -56268,10 +56268,10 @@ ddrc_ctrl
 <B>3e0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>e0</B>
+<B>100</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from read command to write command. Include time for bus turnaround and all per-bank, per-rank, and global constraints. DDR2 and DDR3: RL + BL/2 + 2 - WL LPDDR2: RL + BL/2 + RU (tDQSCKmax / tCK) + 1 - WL Write Pre-amble and DQ/DQS jitter timer is included in the above equation. DRAM RELATED.</B>
@@ -56288,10 +56288,10 @@ ddrc_ctrl
 <B>7c00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>e</B>
+<B>d</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>3800</B>
+<B>3400</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from write command to read command. Includes time for bus turnaround and recovery times and all per-bank, per-rank, and global constraints. DDR2 and DDR3: WL + tWTR + BL/2 LPDDR2: WL + tWTR + BL/2 + 1 Unit: clocks. Where, WL: Write latency, BL: burst length. This should match the value. Programmed in the BL bit of the mode register to the DRAM. tWTR: internal WRITE to READ command delay. This comes directly from the DRAM specs.</B>
@@ -56391,7 +56391,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>720238e5</B>
+<B>72023504</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters 2</B>
@@ -57216,10 +57216,10 @@ ddrc_ctrl
 <B>ffff</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>DDR2 and DDR3: Value written into the DRAM EMR2 register. LPDDR2: Value written into the DRAM MR3 register.</B>
@@ -57259,7 +57259,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM EMR2, EMR3 access</B>
@@ -58378,10 +58378,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>6</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>600000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects theAXI address bit used as row address bit 14. Valid Range: 0 to 11, and 15 Internal Base: 23 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 14 is set to 0.</B>
@@ -58421,7 +58421,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>f666666</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Select DRAM row address bits</B>
@@ -66781,10 +66781,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>This delay determines when to select the active rank's ratio logic delay for Write Data and Write DQS slave delay lines after PHY receives a write command at Control Interface. The programmed value must be (Write Latency - 4) with a minimum value of 1.</B>
@@ -66944,7 +66944,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1fc82</B>
+<B>1fc81</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Training control 3</B>
@@ -102333,10 +102333,10 @@ ddrc_ctrl
 <B>3fc0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>56</B>
+<B>30</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>1580</B>
+<B>c00</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>tRFC(min) - Minimum time from refresh to refresh or activate (spec: 75ns to 195ns). DRAM RELATED. Default value is set for DDR3.</B>
@@ -102376,7 +102376,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>4159b</B>
+<B>40c1b</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters register 0</B>
@@ -102460,10 +102460,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>12</B>
+<B>11</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time between write and precharge to same bank Non-LPDDR2 -> WL + BL/2 + tWR LPDDR2 -> WL + BL/2 + tWR + 1 Unit: Clocks where, WL = write latency. BL = burst length. This must match the value programmed in the BL bit of the mode register to the DRAM. BST is not supported at present. tWR = write recovery time. This comes directly from the DRAM specs.</B>
@@ -102583,7 +102583,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>452460d2</B>
+<B>452460d1</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters register 1</B>
@@ -102667,10 +102667,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>5</B>
+<B>4</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Time from write command to write data on DDRC to PHY Interface. (PHY adds an extra flop delay on the write data path; hence this value is one less than the write latency of the DRAM device itself). DDR2/3 -> WL -1 LPDDR -> 1 LPDDR2 ->WL Where WL = Write Latency of DRAM DRAM RELATED.</B>
@@ -102687,10 +102687,10 @@ ddrc_ctrl
 <B>3e0</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
+<B>8</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>e0</B>
+<B>100</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from read command to write command. Include time for bus turnaround and all per-bank, per-rank, and global constraints. non-LPDDR2 -> RL + BL/2 + 2 - WL LPDDR2 -> RL + BL/2 + RU(tDQSCKmax / tCK) + 1 - WL Write Pre-amble and DQ/DQS jitter timer is included in the above equation. DRAM RELATED.</B>
@@ -102707,10 +102707,10 @@ ddrc_ctrl
 <B>7c00</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>e</B>
+<B>d</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>3800</B>
+<B>3400</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Minimum time from write command to read command. Includes time for bus turnaround and recovery times and all per-bank, per-rank, and global constraints. non-LPDDR2 -> WL + tWTR + BL/2 LPDDR2 -> WL + tWTR + BL/2 + 1 Unit: clocks. Where, WL = Write latency, BL = burst length. This should match the value. Programmed in the BL bit of the mode register to the DRAM. tWTR = internal WRITE to READ command delay. This comes directly from the DRAM specs.</B>
@@ -102810,7 +102810,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>720238e5</B>
+<B>72023504</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM Parameters register 2</B>
@@ -103635,10 +103635,10 @@ ddrc_ctrl
 <B>ffff</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Non LPDDR2- Value to be loaded into DRAM EMR2 registers. For LPDDR2 - Value to Write to the MR3 register</B>
@@ -103678,7 +103678,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>8</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>DRAM EMR2, EMR3 access register</B>
@@ -104797,10 +104797,10 @@ ddrc_ctrl
 <B>f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>f</B>
+<B>6</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>f00000</B>
+<B>600000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Selects theAXI address bit used as row address bit 14. Valid Range: 0 to 11, and 15 Internal Base: 23 The selected address bit is determined by adding the Internal Base to the value of this field. If set to 15, row address bit 14 is set to 0.</B>
@@ -104840,7 +104840,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>ff66666</B>
+<B>f666666</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Selects the address bits used as DRAM row address bits</B>
@@ -112626,10 +112626,10 @@ ddrc_ctrl
 <B>1f</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>2</B>
+<B>1</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>This delay determines when to select the active rank's ratio logic delay for Write Data and Write DQS slave delay lines after PHY receives a write command at Control Interface. The programmed value must be (Write Latency - 4) with a minimum value of 1.</B>
@@ -112789,7 +112789,7 @@ ddrc_ctrl
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1fc82</B>
+<B>1fc81</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>Training control register (3)</B>

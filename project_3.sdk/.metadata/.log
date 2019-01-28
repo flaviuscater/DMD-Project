@@ -10576,3 +10576,82 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-01-26 12:16:31.865
 !MESSAGE XSCT command with result: [::hsi::utils::closesw D:/Downloads/project_3/project_3/project_3.sdk/ARM_TEST_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2019-01-26 13:01:38.114
+!MESSAGE Executed Webtalk command
+!SESSION 2019-01-27 21:10:13.239 -----------------------------------------------
+eclipse.buildId=2018.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:/Downloads/project_3/project_3/project_3.sdk
+
+!ENTRY org.eclipse.ui 2 0 2019-01-27 21:10:44.959
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-27 21:10:44.959
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-01-27 21:10:46.545
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-27 21:10:46.545
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:06.086
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:06.093
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:06.127
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:06.135
+!MESSAGE XSCT Command: [setws D:/Downloads/project_3/project_3/project_3.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:12.312
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:12.320
+!MESSAGE XSCT command with result: [setws D:/Downloads/project_3/project_3/project_3.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:12.397
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_0/system.hdf], Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:22.244
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-1
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:22.250
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.227
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.360
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.368
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.374
+!MESSAGE XSCT Command: [hsi get_hw_files -of_object [openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf ; hsi current_hw_design]], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.383
+!MESSAGE XSCT command with result: [hsi get_hw_files -of_object [openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf ; hsi current_hw_design]], Result: [null, design_1.hwh design_1_bd.tcl ps7_init.c ps7_init.h ps7_init_gpl.c ps7_init_gpl.h ps7_init.html ps7_init.tcl design_1_wrapper.bit design_1_wrapper.mmi]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.588
+!MESSAGE XSCT Command: [::hsi::utils::closehw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.634
+!MESSAGE XSCT command with result: [::hsi::utils::closehw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:25.642
+!MESSAGE XSCT Command: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:28.161
+!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/Downloads/project_3/project_3/project_3.sdk/design_1_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:28.174
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/lenovo/AppData/Local/Temp/system5955959347816427929.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-27 21:11:31.209
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/lenovo/AppData/Local/Temp/system5955959347816427929.hdf], Result: [null, ]. Thread: main

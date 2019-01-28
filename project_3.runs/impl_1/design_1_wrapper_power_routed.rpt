@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Dec 11 09:00:13 2018
-| Host             : DESKTOP-QV3A5FQ running 64-bit major release  (build 9200)
+| Date             : Sun Jan 27 21:07:52 2019
+| Host             : Flavi-PC running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
 | Device           : xc7z020clg484-1
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.734        |
+| Total On-Chip Power (W)  | 1.735        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.591        |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.017 |        5 |       --- |             --- |
-| Slice Logic              |     0.007 |     8695 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     3137 |     53200 |            5.90 |
+| Clocks                   |     0.018 |        5 |       --- |             --- |
+| Slice Logic              |     0.007 |     8697 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     3145 |     53200 |            5.91 |
 |   LUT as Distributed RAM |    <0.001 |      106 |     17400 |            0.61 |
-|   Register               |    <0.001 |     3451 |    106400 |            3.24 |
+|   Register               |    <0.001 |     3449 |    106400 |            3.24 |
 |   CARRY4                 |    <0.001 |       96 |     13300 |            0.72 |
 |   F7/F8 Muxes            |    <0.001 |      111 |     53200 |            0.21 |
-|   LUT as Shift Register  |    <0.001 |      162 |     17400 |            0.93 |
+|   LUT as Shift Register  |    <0.001 |      160 |     17400 |            0.92 |
 |   Others                 |    <0.001 |      830 |       --- |             --- |
-| Signals                  |     0.010 |     6238 |       --- |             --- |
-| Block RAM                |     0.024 |        8 |       140 |            5.71 |
+| Signals                  |     0.010 |     6235 |       --- |             --- |
+| Block RAM                |     0.024 |      8.5 |       140 |            6.07 |
 | I/O                      |     0.000 |        8 |       200 |            4.00 |
 | PS7                      |     1.533 |        1 |       --- |             --- |
 | Static Power             |     0.143 |          |           |                 |
-| Total                    |     1.734 |          |           |                 |
+| Total                    |     1.735 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.071 |       0.056 |      0.015 |
+| Vccint    |       1.000 |     0.072 |       0.056 |      0.015 |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -303,8 +303,8 @@ Table of Contents
 |             reg_slice_r                                                            |    <0.001 |
 |             splitter_ar                                                            |    <0.001 |
 |             splitter_aw                                                            |    <0.001 |
-|     axi_timer_0                                                                    |     0.003 |
-|       U0                                                                           |     0.003 |
+|     axi_timer_0                                                                    |     0.004 |
+|       U0                                                                           |     0.004 |
 |         AXI4_LITE_I                                                                |    <0.001 |
 |           I_SLAVE_ATTACHMENT                                                       |    <0.001 |
 |             I_DECODER                                                              |    <0.001 |
@@ -318,7 +318,7 @@ Table of Contents
 |           COUNTER_0_I                                                              |     0.001 |
 |             COUNTER_I                                                              |     0.001 |
 |           GEN_SECOND_TIMER.COUNTER_1_I                                             |     0.001 |
-|             COUNTER_I                                                              |    <0.001 |
+|             COUNTER_I                                                              |     0.001 |
 |           READ_MUX_I                                                               |    <0.001 |
 |           TIMER_CONTROL_I                                                          |    <0.001 |
 |             INPUT_DOUBLE_REGS                                                      |    <0.001 |
@@ -538,7 +538,7 @@ Table of Contents
 |                 Gen_Bit[7].MUXF7_I1                                                |    <0.001 |
 |                 Gen_Bit[8].MUXF7_I1                                                |    <0.001 |
 |                 Gen_Bit[9].MUXF7_I1                                                |    <0.001 |
-|               Register_File_I                                                      |     0.002 |
+|               Register_File_I                                                      |     0.001 |
 |                 Using_LUT6.All_RAM32M[0].ram32m_i                                  |    <0.001 |
 |                   Using_FPGA.Native                                                |    <0.001 |
 |                 Using_LUT6.All_RAM32M[10].ram32m_i                                 |    <0.001 |
@@ -1047,8 +1047,8 @@ Table of Contents
 |               Gen_WE[1].SUM_I                                                      |    <0.001 |
 |               Gen_WE[2].SUM_I                                                      |    <0.001 |
 |               Gen_WE[3].SUM_I                                                      |    <0.001 |
-|               TAG_RAM_Module                                                       |     0.002 |
-|                 Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1                 |     0.002 |
+|               TAG_RAM_Module                                                       |     0.003 |
+|                 Not_Using_XPM.Using_B36_S36.The_BRAMs[0].RAMB36_I1                 |     0.003 |
 |               Use_XX_Accesses3.xx_access_read_miss                                 |    <0.001 |
 |                 MUXCY_I                                                            |    <0.001 |
 |               Use_XX_Accesses_Hit.dcache_data_strobe_sel2_carry_or                 |    <0.001 |
@@ -1299,11 +1299,13 @@ Table of Contents
 |       lmb_bram                                                                     |     0.001 |
 |         U0                                                                         |     0.001 |
 |           inst_blk_mem_gen                                                         |     0.001 |
-|             gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen                  |     0.001 |
+|             gnbram.gnativebmg.native_blk_mem_gen                                   |     0.001 |
 |               valid.cstr                                                           |     0.001 |
 |                 ramloop[0].ram.r                                                   |    <0.001 |
 |                   prim_noinit.ram                                                  |    <0.001 |
 |                 ramloop[1].ram.r                                                   |    <0.001 |
+|                   prim_noinit.ram                                                  |    <0.001 |
+|                 ramloop[2].ram.r                                                   |    <0.001 |
 |                   prim_noinit.ram                                                  |    <0.001 |
 |     processing_system7_0                                                           |     1.534 |
 |       inst                                                                         |     1.534 |
